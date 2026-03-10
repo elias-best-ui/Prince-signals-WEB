@@ -22,7 +22,7 @@
         }
 
         header {
-            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1611974717482-98252c00300c?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('https://images.unsplash.com/photo-1611974717482-98252c00300c?auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             height: 100vh;
             display: flex;
@@ -34,10 +34,8 @@
         }
 
         .gold-text { color: var(--gold); }
-
         h1 { font-size: 3.5rem; margin-bottom: 10px; }
-        p { font-size: 1.2rem; max-width: 600px; }
-
+        
         .btn {
             background-color: var(--gold);
             color: var(--dark-blue);
@@ -48,31 +46,12 @@
             font-size: 1.2rem;
             margin-top: 30px;
             transition: 0.3s;
+            display: inline-block;
         }
 
         .btn:hover { background-color: #f1c40f; transform: scale(1.05); }
 
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 80px 10%;
-            background-color: var(--light-blue);
-        }
-
-        .feature-box {
-            background: var(--dark-blue);
-            padding: 30px;
-            border-radius: 15px;
-            border-bottom: 4px solid var(--gold);
-            text-align: center;
-        }
-
-        .pricing {
-            padding: 80px 10%;
-            text-align: center;
-        }
-
+        .pricing { padding: 80px 10%; text-align: center; }
         .pricing-grid {
             display: flex;
             justify-content: center;
@@ -85,83 +64,92 @@
             background: var(--light-blue);
             padding: 40px;
             border-radius: 20px;
-            width: 250px;
+            width: 280px;
             transition: 0.3s;
+            border: 1px solid rgba(212, 175, 55, 0.1);
         }
 
         .price-card.featured {
             border: 2px solid var(--gold);
-            transform: scale(1.1);
+            transform: scale(1.05);
+            background: #1d3354;
         }
 
-        .price-card h3 { font-size: 1.8rem; margin-bottom: 10px; }
-        .price { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
+        .floating-tg {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: #24A1DE;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            text-decoration: none;
+            font-weight: bold;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-        footer {
-            text-align: center;
-            padding: 40px;
-            background: #020c1b;
-            font-size: 0.9rem;
+        .chart-container {
+            height: 450px;
+            margin: 40px 10%;
+            background: var(--light-blue);
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid var(--gold);
         }
     </style>
 </head>
 <body>
 
+    <a href="https://t.me/Prince_Signals_Pro_bot" class="floating-tg">
+        <span>💬 דבר עם הנסיך בטלגרם</span>
+    </a>
+
     <header>
         <h1>👑 <span class="gold-text">Prince Signals Pro</span></h1>
-        <p>מערכת הניתוח המתקדמת בעולם למסחר בקריפטו, מניות ופורקס - עכשיו אצלך בטלגרם.</p>
-        <a href="#pricing" class="btn">התחל לסחור חכם יותר</a>
+        <p>מערכת הניתוח המקצועית למסחר חכם - עכשיו אצלך בטלגרם.</p>
+        <a href="#pricing" class="btn">הצטרף לנבחרת המנצחת</a>
     </header>
 
-    <section class="features">
-        <div class="feature-box">
-            <h3>🤖 אסטרטגיות מבוססות AI</h3>
-            <p>שילוב של Bollinger Bands לקריפטו ונקודות Pivot למניות, לדיוק מקסימלי בכל כניסה.</p>
-        </div>
-        <div class="feature-box">
-            <h3>⚡ ניתוח בזמן אמת</h3>
-            <p>חיבור ישיר ל-CoinMarketCap ו-Yahoo Finance לקבלת נתונים חיים ללא השהייה.</p>
-        </div>
-        <div class="feature-box">
-            <h3>🌍 תמיכה רב-לשונית</h3>
-            <p>ממשק מלא בעברית, אנגלית וערבית כדי שתוכל לפעול בנוחות מקסימלית.</p>
-        </div>
-    </section>
+    <div class="chart-container">
+        <div id="tradingview_chart" style="height:100%;"></div>
+        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+        <script type="text/javascript">
+        new TradingView.widget({
+          "autosize": true,
+          "symbol": "BINANCE:BTCUSDT",
+          "interval": "60",
+          "theme": "dark",
+          "style": "1",
+          "locale": "he_IL",
+          "container_id": "tradingview_chart"
+        });
+        </script>
+    </div>
 
     <section id="pricing" class="pricing">
-        <h2>תוכניות מנוי</h2>
+        <h2 class="gold-text">תוכניות מנוי</h2>
         <div class="pricing-grid">
             <div class="price-card">
-                <h3>מתחילים</h3>
-                <div class="price">₪149</div>
-                <p>חודש אחד</p>
-                <p>גישה לכל המניות</p>
-                <p>סיגנלים בסיסיים</p>
-                <a href="https://t.me/YOUR_BOT_LINK" class="btn" style="padding: 10px 20px; font-size: 1rem;">רכישה</a>
+                <h3>חודשי</h3>
+                <div style="font-size: 2.5rem; margin: 15px 0;">₪149</div>
+                <p>גישה מלאה לכל הנכסים</p>
+                <p>סיגנלים בזמן אמת</p>
+                <a href="https://t.me/Prince_Signals_Pro_bot" class="btn" style="padding: 10px 25px;">רכישה</a>
             </div>
             <div class="price-card featured">
-                <h3>👑 VIP</h3>
-                <div class="price">₪299</div>
-                <p>3 חודשים</p>
-                <p>קריפטו + בולינג'ר</p>
-                <p>תמיכה אישית 24/7</p>
-                <a href="https://t.me/YOUR_BOT_LINK" class="btn" style="padding: 10px 20px; font-size: 1rem;">הכי פופולרי</a>
-            </div>
-            <div class="price-card">
-                <h3>מקצוענים</h3>
-                <div class="price">₪899</div>
-                <p>שנה שלמה</p>
-                <p>כל הפיצ'רים פתוחים</p>
-                <p>גישה מוקדמת לעדכונים</p>
-                <a href="https://t.me/YOUR_BOT_LINK" class="btn" style="padding: 10px 20px; font-size: 1rem;">חיסכון ענק</a>
+                <h3>👑 VIP רבעוני</h3>
+                <div style="font-size: 2.5rem; margin: 15px 0;">₪299</div>
+                <p>3 חודשים של שקט</p>
+                <p>אסטרטגיית בולינג'ר פרימיום</p>
+                <p>תמיכה אישית</p>
+                <a href="https://t.me/Prince_Signals_Pro_bot" class="btn" style="padding: 10px 25px;">המשתלם ביותר</a>
             </div>
         </div>
     </section>
-
-    <footer>
-        <p>&copy; 2026 Prince Signals Pro. כל הזכויות שמורות.</p>
-        <p>השימוש במערכת אינו מהווה ייעוץ השקעות. המסחר בשוק ההון טומן בחובו סיכון.</p>
-    </footer>
 
 </body>
 </html>
