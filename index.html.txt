@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prince Signals Pro | הקיסר החדש של עולם המסחר</title>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark-blue: #0a192f;
+            --light-blue: #172a45;
+            --white: #e6f1ff;
+        }
+
+        body {
+            font-family: 'Assistant', sans-serif;
+            background-color: var(--dark-blue);
+            color: var(--white);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(rgba(10, 25, 47, 0.8), rgba(10, 25, 47, 0.8)), url('https://images.unsplash.com/photo-1611974717482-98252c00300c?auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .gold-text { color: var(--gold); }
+
+        h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        p { font-size: 1.2rem; max-width: 600px; }
+
+        .btn {
+            background-color: var(--gold);
+            color: var(--dark-blue);
+            padding: 15px 40px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { background-color: #f1c40f; transform: scale(1.05); }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 80px 10%;
+            background-color: var(--light-blue);
+        }
+
+        .feature-box {
+            background: var(--dark-blue);
+            padding: 30px;
+            border-radius: 15px;
+            border-bottom: 4px solid var(--gold);
+            text-align: center;
+        }
+
+        .pricing {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .pricing-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .price-card {
+            background: var(--light-blue);
+            padding: 40px;
+            border-radius: 20px;
+            width: 250px;
+            transition: 0.3s;
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--gold);
+            transform: scale(1.1);
+        }
+
+        .price-card h3 { font-size: 1.8rem; margin-bottom: 10px; }
+        .price { font-size: 2.5rem; font-weight: bold; margin: 20px 0; }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #020c1b;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>👑 <span class="gold-text">Prince Signals Pro</span></h1>
+        <p>מערכת הניתוח המתקדמת בעולם למסחר בקריפטו, מניות ופורקס - עכשיו אצלך בטלגרם.</p>
+        <a href="#pricing" class="btn">התחל לסחור חכם יותר</a>
+    </header>
+
+    <section class="features">
+        <div class="feature-box">
+            <h3>🤖 אסטרטגיות מבוססות AI</h3>
+            <p>שילוב של Bollinger Bands לקריפטו ונקודות Pivot למניות, לדיוק מקסימלי בכל כניסה.</p>
+        </div>
+        <div class="feature-box">
+            <h3>⚡ ניתוח בזמן אמת</h3>
+            <p>חיבור ישיר ל-CoinMarketCap ו-Yahoo Finance לקבלת נתונים חיים ללא השהייה.</p>
+        </div>
+        <div class="feature-box">
+            <h3>🌍 תמיכה רב-לשונית</h3>
+            <p>ממשק מלא בעברית, אנגלית וערבית כדי שתוכל לפעול בנוחות מקסימלית.</p>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2>תוכניות מנוי</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>מתחילים</h3>
+                <div class="price">₪149</div>
+                <p>חודש אחד</p>
+                <p>גישה לכל המניות</p>
+                <p>סיגנלים בסיסיים</p>
+                <a href="https://t.me/YOUR_BOT_LINK" class="btn" style="padding: 10px 20px; font-size: 1rem;">רכישה</a>
+            </div>
+            <div class="price-card featured">
+                <h3>👑 VIP</h3>
+                <div class="price">₪299</div>
+                <p>3 חודשים</p>
+                <p>קריפטו + בולינג'ר</p>
+                <p>תמיכה אישית 24/7</p>
+                <a href="https://t.me/YOUR_BOT_LINK" class="btn" style="padding: 10px 20px; font-size: 1rem;">הכי פופולרי</a>
+            </div>
+            <div class="price-card">
+                <h3>מקצוענים</h3>
+                <div class="price">₪899</div>
+                <p>שנה שלמה</p>
+                <p>כל הפיצ'רים פתוחים</p>
+                <p>גישה מוקדמת לעדכונים</p>
+                <a href="https://t.me/YOUR_BOT_LINK" class="btn" style="padding: 10px 20px; font-size: 1rem;">חיסכון ענק</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Prince Signals Pro. כל הזכויות שמורות.</p>
+        <p>השימוש במערכת אינו מהווה ייעוץ השקעות. המסחר בשוק ההון טומן בחובו סיכון.</p>
+    </footer>
+
+</body>
+</html>
